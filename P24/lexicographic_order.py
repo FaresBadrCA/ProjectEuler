@@ -2,23 +2,16 @@
 """
 What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
 
-let i point at elements from the end of the array backwards
-we start with permute([0,1,2,3,4], i = 1)
-
-temp_arr = arr[:i] # last i elements 
-
-if temp_arr is ascending: swap the two elements and return
-
 idea: we check if the last 'i' elements are in descending order
 if not, we call permute(arr, i-1), and its job is to make them in descending order
 
-once permute(arr, i-1) returns we have an array in descending order
+once permute(arr, i-1) returns True, we have an array in descending order
 then we 
 1) reverse it so it's in ascending order again
 2) find the smallest element larger than k and swap it with k
 and call permute again on the result
 
-eventually, there is no elemnet larger than k, then we just return true
+eventually, there is no elemnet larger than k, then we just return true.
 
 012345
 012354
