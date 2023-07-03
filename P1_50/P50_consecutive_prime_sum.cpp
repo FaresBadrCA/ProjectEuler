@@ -41,7 +41,7 @@ std::vector<bool> primes_less_than_n(uint64_t n) {
 
 int main() {
 
-	uint64_t limit = 1e9;
+	uint64_t limit = 1e6;
 	std::vector<bool>is_prime = primes_less_than_n(limit);
 
 	std::vector<uint64_t> primes;
